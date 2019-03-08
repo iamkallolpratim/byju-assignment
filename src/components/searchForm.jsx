@@ -39,7 +39,7 @@ export default class SearchForm extends Component {
                         <div className="col-sm-6">
                             <div className="form-group">
                                 <label>Location :</label>
-                                <input type="text" className="form-control" placeholder="ssearch places amomng delhi , tumkur , mumbai and Bengaluru/Bangalore only" onChange={event => this.handleOnChange(event , 'location')}/>
+                                <input type="text" className="form-control" placeholder="search places amomng delhi , tumkur , mumbai and Bengaluru/Bangalore only" onChange={event => this.handleOnChange(event , 'location')}/>
                             </div>
                         </div>
                         <div className="col-sm-2">

@@ -36,14 +36,14 @@ export default class SearchForm extends Component {
                             </div>
                         </div>
 
-                        <div className="col-sm-4">
+                        <div className="col-sm-6">
                             <div className="form-group">
                                 <label>Location :</label>
                                 <input type="text" className="form-control" placeholder="ssearch places amomng delhi , tumkur , mumbai and Bengaluru/Bangalore only" onChange={event => this.handleOnChange(event , 'location')}/>
                             </div>
                         </div>
-                        <div className="col-sm-4">
-                            <button className="btn btn-success" type="button" style={{marginTop:'30px'}} onClick={this.search}>
+                        <div className="col-sm-2">
+                            <button className="btn btn-success btn-block" type="button" style={{marginTop:'30px'}} onClick={this.search}>
                                 SEARCH
                             </button>
                         </div>

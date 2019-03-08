@@ -59,11 +59,8 @@ class JobContainer extends Component {
     }
 
     filterData = (event) => {
-        
         let jobs = this.state.jobs;
-        // var keyword = event.target.value.replace(/^\s+|\s+$/gm,'')
         if(event.target.value !== ''){
-            
             let filteredJobs = jobs.filter(job => {
                 return  job.title.toLowerCase().includes(event.target.value.toLowerCase()) || job.skills.toLowerCase().includes(event.target.value.toLowerCase()) || job.companyname.toLowerCase().includes(event.target.value.toLowerCase());
             });

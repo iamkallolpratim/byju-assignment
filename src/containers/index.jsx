@@ -15,7 +15,7 @@ class JobContainer extends Component {
             loading: false,
             location:'',
             experience:''
-            
+
         }
     }
 
@@ -47,7 +47,7 @@ class JobContainer extends Component {
             if (location !== '') {
                 let newJobs = jobs.filter(job => {
                     return  job.location.toLowerCase().includes(location.toLowerCase());
-                })
+                });
                 this.setState({ jobs: newJobs, loading: false });
             }
             else {
@@ -59,13 +59,15 @@ class JobContainer extends Component {
     }
 
     filterData = (event) => {
-        console.log(event.target.value)
+        
         let jobs = this.state.jobs;
-        var keyword = event.target.value.replace(/^\s+|\s+$/gm,'')
-        if(keyword!==""){
+        // var keyword = event.target.value.replace(/^\s+|\s+$/gm,'')
+        if(event.target.value !== ''){
+            
             let filteredJobs = jobs.filter(job => {
                 return  job.title.toLowerCase().includes(event.target.value.toLowerCase()) || job.skills.toLowerCase().includes(event.target.value.toLowerCase()) || job.companyname.toLowerCase().includes(event.target.value.toLowerCase());
             });
+            console.log(filteredJobs)
             this.setState({ jobs: filteredJobs });
         }
         else{
@@ -84,12 +86,15 @@ class JobContainer extends Component {
                         :
 
                         <div>
-                            <div className="alert alert-primary" role="alert">
-                                Number of Jobs Found : {this.state.jobs.length}
-                            </div>
+                            
                             {
                                 this.props.data.jobs.jobsfeed&&this.props.data.jobs.jobsfeed.length>0 &&
+                                <div>
+                                    <div className="alert alert-primary" role="alert">
+                                Number of Jobs Found : {this.state.jobs.length}
+                                </div>
                                 <input type="text" className="form-control" onChange={this.filterData} placeholder="filter jobs by skills , titles or company name "/>
+                                </div>
                             }
                             <SearchResult jobs={this.state.jobs} />
                         </div>

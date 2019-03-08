@@ -19,6 +19,10 @@ export default class Searchresult extends Component{
                           <p className="small"><b>Experience</b>: {job.experience!=='' ? job.experience : <span className="text-danger">not mentioned</span>}</p>
                           <p className="small"><b>Salary</b>: {job.salary!=='' ? job.salary : <span className="text-danger">not mentioned</span>}</p>
                           <p className="small">Skills Required : {job.skills!=='' ? job.skills : <span className="text-danger">not mentioned</span>}</p>
+                          <p className="small">Source : {job.source!=='' ? job.source : <span className="text-danger">N/A</span>}</p>
+                          <p className="small">Type : {job.type!=='' ? job.type : <span className="text-danger">N/A</span>}</p>
+                          <p className="small">Start Date : {job.startdate!=='' ? job.startdate : <span className="text-danger">N/A</span>}</p>
+                          <p className="small">End Date : {job.enddate!=='' ? job.enddate : <span className="text-danger">N/A</span>}</p>
                           <p className="small">
                               <b>Description</b> : {job.jd!=='' ? job.jd : <span className="text-danger">not mentioned</span>}
                           </p>

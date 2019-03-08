@@ -1,0 +1,9 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+body{
+    margin-top:50px;
+    margin-bottom: 30px;
+}
+
+p{
+    margin-bottom: 0.6rem;
+}
